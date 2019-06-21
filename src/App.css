@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -19,7 +19,7 @@
   color: white;
 }
 
-.App-link {
+.move {
   color: #61dafb;
 }
 
@@ -29,5 +29,23 @@
   }
   to {
     transform: rotate(360deg);
+  }
+} */
+
+.ship {
+  position: relative;
+  z-index: 1;
+  animation: myMove 5ss infinite;
+}
+
+.ship {
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}
+@keyframes myMove {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
   }
 }

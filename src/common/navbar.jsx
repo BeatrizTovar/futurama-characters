@@ -7,7 +7,9 @@ const NavbarMenu = () => {
     <div>
       <Stack>
         <Box border={{ color: "#70e3a2", size: "large" }} background="#70e3a2">
-          <Image fit="contain" alignSelf="start" src={ship} />
+          {/* <div class="ship"> */}
+          <Image className="ship" alignSelf="start" src={ship} />
+          {/* </div> */}
           <Button primary color="brand" label="Button" alignSelf="end" />
         </Box>
       </Stack>
