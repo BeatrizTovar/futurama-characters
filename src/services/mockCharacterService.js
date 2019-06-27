@@ -97,4 +97,6 @@ const characters = [
   }
 ];
 
-export default characters;
+export function getCharacters() {
+  return characters;
+}

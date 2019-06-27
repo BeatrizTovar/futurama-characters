@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Image, Carousel, Stack } from "grommet";
-import StarBackground from "../images/misc/StarBackground.png";
+import { Box, Image, Stack } from "grommet";
+// import StarBackground from "../images/misc/StarBackground.png";
 
 const Body = () => {
   return (
@@ -12,7 +12,7 @@ const Body = () => {
      >
      </Box> */}
       <Box>{/* HORIZONTAL LIST */}</Box>
-      <Image src={StarBackground} />
+      <Image />
     </Stack>
   );
 };

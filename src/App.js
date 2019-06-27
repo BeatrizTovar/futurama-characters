@@ -1,18 +1,13 @@
 import React, { Component, Fragment } from "react";
-import { Grid } from "grommet";
 import "./App.css";
 import Navbar from "./common/navbar";
-import Body from "./common/body";
-import Test from "./common/test";
+import Characters from "./components/characters";
 class App extends Component {
   render() {
     return (
       <Fragment>
-        {/* <Grid> */}
         <Navbar />
-        <Body />
-        <Test />
-        {/* </Grid> */}
+        <Characters />
       </Fragment>
     );
   }
