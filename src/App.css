@@ -37,7 +37,7 @@
   z-index: 1;
   animation: myMove 5ss infinite;
 }
-
+/* fix typo above */
 .ship {
   animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
 }
@@ -48,4 +48,12 @@
   to {
     left: 100%;
   }
+}
+
+.test {
+  background: black !important;
+}
+
+.test2 {
+  text-align: center !important;
 }
