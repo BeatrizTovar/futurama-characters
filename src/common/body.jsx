@@ -4,7 +4,8 @@ import Amy from "../images/characters/AmyWong.png";
 // import StarBackground from "../images/misc/StarBackground.png";
 
 const Body = ({ characters }) => {
-  debugger;
+  const baseUrl = "../images/characters/";
+  // debugger;
   return (
     <Stack>
       {console.log(characters)}
@@ -17,10 +18,15 @@ const Body = ({ characters }) => {
      </Box> */}
       <Box>
         {characters.map(char => (
-          <div key={char.id}>{char.title}</div>
+          <div key={char.id}>
+            {char.title}
+            {char.desc}
+            {char.src}
+            {console.log(typeof Amy)}
+            <Image src={Amy} alignSelf="center" />
+          </div>
         ))}
         {/* HORIZONTAL LIST */}
-        <Image src="../images/characters/AmyWong.png" alignSelf="center" />
         {JSON.stringify(characters)}
       </Box>
     </Stack>
