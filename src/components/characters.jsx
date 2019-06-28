@@ -9,16 +9,14 @@ class Characters extends Component {
 
   componentDidMount() {
     this.setState({ characters: getCharacters() });
-    debugger;
-    // console.log(chars);
   }
 
   render() {
-    console.log(this.state.characters);
+    // let characters = this.state.characters.id;
 
     return (
       <Fragment>
-        <Body />
+        <Body characters={this.state.characters} />
       </Fragment>
     );
   }
