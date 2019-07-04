@@ -1,22 +1,40 @@
 export const characters = [
   {
     id: 1,
-    src: "../images/characters/AmyWong.png",
+    src: "http://i63.tinypic.com/rmpgms.jpg",
     title: "Amy Wong",
     desc: "Character desc Here"
   },
   {
     id: 2,
-    src: "../images/characters/Bender.png",
+    src: "http://i66.tinypic.com/2945bat.jpg",
     title: "Bender B. Rodriguez",
     desc: "Character desc Here"
+  },
+  {
+    id: 3,
+    src: "http://i64.tinypic.com/5d194j.jpg",
+    title: "Phillip J. Fry",
+    desc: "Character desc Here"
+  },
+  {
+    id: 7,
+    src: "http://i65.tinypic.com/kcxn9z.jpg",
+    title: "Turanga Leela",
+    desc: "Character desc Here"
+  },
+  {
+    id: 11,
+    src: "http://i68.tinypic.com/1y4n5w.jpg",
+    title: "Professor Farmsworth",
+    desc: "Character desc Here"
+  },
+  {
+    id: 16,
+    src: "http://i64.tinypic.com/2vdp6v9.jpg",
+    title: "Zoidberg",
+    desc: "Character desc Here"
   }
-  //   {
-  //     id: 3,
-  //     src: "./images/characters/Fry.png",
-  //     title: "Phillip J. Fry",
-  //     desc: "Character desc Here"
-  //   },
   //   {
   //     id: 4,
   //     src: "./images/characters/HermesConrad.png",
@@ -35,12 +53,7 @@ export const characters = [
   //     title: "Kif Kroker",
   //     desc: "Character desc Here"
   //   },
-  //   {
-  //     id: 7,
-  //     src: "./images/characters/Leela.png",
-  //     title: "Turanga Leela",
-  //     desc: "Character desc Here"
-  //   },
+  //
   //   {
   //     id: 8,
   //     src: "./images/characters/Mom.png",
@@ -59,12 +72,7 @@ export const characters = [
   //     title: "Nixon",
   //     desc: "Character desc Here"
   //   },
-  //   {
-  //     id: 11,
-  //     src: "./images/characters/ProfessorFarmsworth.png",
-  //     title: "Professor Farmsworth",
-  //     desc: "Character desc Here"
-  //   },
+  //
   //   {
   //     id: 12,
   //     src: "./images/characters/Roberto.png",
@@ -89,12 +97,6 @@ export const characters = [
   //     title: "Zapp Braniggan",
   //     desc: "Character desc Here"
   //   },
-  //   {
-  //     id: 16,
-  //     src: "./images/characters/Zoidberg.png",
-  //     title: "Zoidberg",
-  //     desc: "Character desc Here"
-  //   }
 ];
 
 export function getCharacters() {
