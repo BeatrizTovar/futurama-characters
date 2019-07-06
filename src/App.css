@@ -99,7 +99,7 @@ img {
 }
 
 .card-content {
-  background-color: #e74c3c;
+  background-color: #c32b1f;
   min-width: 15%;
   min-height: 400px;
   margin: 35px;
@@ -108,7 +108,7 @@ img {
 }
 
 .card-content:hover {
-  box-shadow: 1px 3px 18px 0px #70e3a2;
+  box-shadow: 3px 3px 7px 0px #d0b835;
 }
 .card::-webkit-scrollbar {
   display: none;
