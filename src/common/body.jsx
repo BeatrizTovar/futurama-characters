@@ -13,8 +13,12 @@ const Body = ({ characters }) => {
             {characters.map(char => (
               <div className="card-content" key={char.id}>
                 <Image src={char.src} />
-                <p>{char.title}</p>
-                <p>{char.desc}</p>
+                <p>Name: {char.title}</p>
+                <p>Age: {char.title}</p>
+                <p>Other: {char.title}</p>
+                <div className="card-footer">
+                  <p>Desc: {char.desc}</p>
+                </div>
               </div>
             ))}
           </section>
