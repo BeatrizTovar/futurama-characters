@@ -7,7 +7,7 @@ const NavbarMenu = () => {
     <div>
       <Stack>
         <Box
-          className="test2"
+          className="starBack"
           // border={{ color: "#70e3a2", size: "large" }}
           // background="#70e3a2"
         >

@@ -8,22 +8,21 @@ const Body = ({ characters }) => {
   return (
     // <Stack>
     <Fragment>
-      {/* {console.log(characters)} */}
-      <section className="card">
-        {characters.map(char => (
-          <div className="card-content" key={char.id}>
-            {/* {char.title} */}
-            {/* {char.desc} */}
-            {/* {char.src} */}
-            {/* {console.log(typeof Amy)} */}
-            <Image src={char.src} />
-          </div>
-        ))}
-      </section>
-
-      {/* HORIZONTAL LIST */}
-      {/* {JSON.stringify(characters)} */}
-      {/* </Stack> */}
+      <div className="hqBack">
+        yo!
+        <section className="card">
+          {characters.map(char => (
+            <div className="card-content" key={char.id}>
+              {char.title}
+              {char.desc}
+              {char.src}
+              {console.log(typeof Amy)}
+              <Image src={char.src} />
+            </div>
+          ))}
+        </section>
+        {/* </Stack> */}
+      </div>
     </Fragment>
   );
 };
