@@ -74,15 +74,21 @@ body {
 }
 
 .card {
-  background-color: #fff;
+  background-color: rgb(202, 176, 176);
   min-width: 50%;
   min-height: 200px;
   display: flex;
   overflow-x: auto;
+  margin-top: 20vh;
 }
 
 .card-content {
   background-color: #e74c3c;
-  min-width: 200px;
-  margin: 5px;
+  min-width: 15%;
+  min-height: 400px;
+  margin: 35px;
+}
+
+.card::-webkit-scrollbar {
+  display: none;
 }
