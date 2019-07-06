@@ -61,10 +61,11 @@
 
 .hqBack {
   background-color: #000;
-  background-image: url("./images/misc/newnewyorkskyline.png");
-  background-position: bottom;
-  background-size: cover;
-  padding-top: 5%;
+  /* background-image: url("./images/misc/newnewyorkskyline.png"); */
+  background-image: url("./images/misc/SkylineStarBackground.png");
+  /* background-position: bottom; */
+  /* background-size: cover; */
+  padding: 3% 5% 10%;
 }
 
 html,
@@ -89,11 +90,11 @@ body {
   min-height: 200px;
   display: flex;
   overflow-x: auto;
-  margin-top: 20vh;
+  margin-top: 3%;
 }
 
 .card-content {
-  /* background-color: #e74c3c; */
+  background-color: #e74c3c;
   min-width: 15%;
   min-height: 400px;
   margin: 35px;

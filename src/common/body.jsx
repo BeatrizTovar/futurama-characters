@@ -9,15 +9,14 @@ const Body = ({ characters }) => {
     // <Stack>
     <Fragment>
       <div className="hqBack">
-        yo!
         <section className="card">
           {characters.map(char => (
             <div className="card-content" key={char.id}>
-              {char.title}
-              {char.desc}
-              {char.src}
-              {console.log(typeof Amy)}
               <Image src={char.src} />
+              <p>{char.title}</p>
+              <p>{char.desc}</p>
+              <p>{char.src}</p>
+              {/* {console.log(typeof Amy)} */}
             </div>
           ))}
         </section>
