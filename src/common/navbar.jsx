@@ -12,7 +12,7 @@ const NavbarMenu = () => {
           // background="#70e3a2"
         >
           <Image className="ship" alignSelf="start" src={ship} />
-          <Button primary color="brand" label="Button" alignSelf="end" />
+          {/* <Button primary color="brand" label="Button" alignSelf="end" /> */}
         </Box>
       </Stack>
     </div>
