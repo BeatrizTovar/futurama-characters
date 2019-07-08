@@ -3,14 +3,18 @@ import axios from "axios";
 function quote(character) {
   const promise = axios
     .get(`futuramaapi.herokuapp.com/api/characters/${character}`)
-    .then(success);
-  // .catch(error);
+    .then(successResponse)
+    .catch(errorResponse);
 
   return promise;
 }
 
-const success = response => {
+const successResponse = response => {
   console.log(response);
+};
+
+const errorResponse = response => {
+  console.log("something went wrong");
 };
 
 export { quote };

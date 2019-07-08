@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from "react";
 import Body from "../common/body";
 import { getCharacters } from "../services/mockCharacterService";
-import { quote } from "../services/characterQuotes";
+import * as characterQuote from "../services/characterQuotes";
+import axios from "axios";
 
 class Characters extends Component {
   state = {
@@ -10,7 +11,15 @@ class Characters extends Component {
 
   componentDidMount() {
     this.setState({ characters: getCharacters() });
-    quote("amy");
+    // characterQuote.quote("amy");
+    axios
+      .get("futuramaapi.herokuapp.com/api/characters/amy")
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        console.log("something went wrong");
+      });
   }
 
   render() {
