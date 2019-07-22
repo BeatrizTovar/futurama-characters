@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Box, Image, Stack } from "grommet";
+import { Image, Stack } from "grommet";
 // import Amy from "../images/characters";
 // import StarBackground from "../images/misc/StarBackground.png";
 

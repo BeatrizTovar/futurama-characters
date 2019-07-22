@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Image, Stack } from "grommet";
+import { Box, Image, Stack } from "grommet";
 import ship from "../images/misc/PlanetExpressShip.gif";
 
 const NavbarMenu = () => {

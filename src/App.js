@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import "./App.css";
 import Navbar from "./common/navbar";
-import Characters from "./components/characters";
+import Characters from "./components/Home";
 class App extends Component {
   render() {
     return (

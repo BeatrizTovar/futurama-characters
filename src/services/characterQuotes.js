@@ -10,7 +10,12 @@ function quote(character) {
 }
 
 const successResponse = response => {
-  console.log(response);
+  let data = response.data;
+  console.log("D", data);
+  const result = response.data.forEach(q => console.log(q.quote));
+  // console.log(result)
+  // console.log("SR: ", response.data.filter(character => character.quote));
+  return response.data;
 };
 
 const errorResponse = response => {
