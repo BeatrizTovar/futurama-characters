@@ -2,7 +2,7 @@ import axios from "axios";
 
 function quote(character) {
   const promise = axios
-    .get(`futuramaapi.herokuapp.com/api/characters/${character}`)
+    .get(`http://futuramaapi.herokuapp.com/api/characters/${character}`)
     .then(successResponse)
     .catch(errorResponse);
 

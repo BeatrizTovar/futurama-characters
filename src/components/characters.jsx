@@ -13,9 +13,7 @@ class Characters extends Component {
     this.setState({ characters: getCharacters() });
     // characterQuote.quote("amy");
     axios
-      .get("https://futuramaapi.herokuapp.com/api/characters/amy", {
-        withCredentials: true
-      })
+      .get("http://futuramaapi.herokuapp.com/api/characters/amy")
       .then(response => {
         console.log(response);
       })
