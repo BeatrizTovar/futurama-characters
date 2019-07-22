@@ -11,6 +11,13 @@ function quote(character) {
 
 const successResponse = response => {
   let data = response.data; // save each characters data in an array
+  let length = data.length;
+
+  if (length > 1) {
+    let quote = data[Math.floor(Math.random() * length)];
+
+    console.log("YUP", quote);
+  }
 
   // array of objects each one containing a characters, quote, image,
   // character => id , quote => quote, image is not currently used
@@ -19,7 +26,7 @@ const successResponse = response => {
   // check length of array for more than one entry if more less than one
   // return default message
 
-  const result = response.data.forEach(q => console.log(q.quote));
+  // const result = response.data.forEach(q => console.log(q.quote));
   // console.log(result)
   // console.log("SR: ", response.data.filter(character => character.quote));
   // return response.data;
