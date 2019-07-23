@@ -12,11 +12,16 @@ function quote(character) {
 const successResponse = response => {
   let data = response.data; // save each characters data in an array
   let length = data.length;
+  let defaultMessage = "Ooops! There seems to be nothing here!";
 
-  if (length > 1) {
-    let quote = data[Math.floor(Math.random() * length)];
-
-    console.log("YUP", quote);
+  if (length < 1 || length === undefined) {
+    console.log(defaultMessage);
+    return defaultMessage;
+  } else {
+    //the variable random is the index in the array i.e data[i]
+    let random = data[Math.floor(Math.random() * length)];
+    console.log(random);
+    return random;
   }
 
   // array of objects each one containing a characters, quote, image,
