@@ -22,7 +22,7 @@ const successResponse = response => {
   } else {
     //  data[i] where i is a random integer based on array length
     let randomIndex = data[Math.floor(Math.random() * length)];
-    console.log(randomIndex);
+    // console.log(randomIndex);
     return randomIndex;
   }
 };

@@ -13,9 +13,9 @@ const Body = ({ characters }) => {
             {characters.map(char => (
               <div className="card-content" key={char.id}>
                 <Image src={char.src} />
-                <p>Name: {char.title}</p>
-                <p>Age: {char.title}</p>
-                <p>Other: {char.title}</p>
+                <p>Name: {char.name}</p>
+                <p>Age: {char.name}</p>
+                <p>Other: {char.name}</p>
                 <div className="card-footer">
                   <p>Desc: {char.desc}</p>
                 </div>

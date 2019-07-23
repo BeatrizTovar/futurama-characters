@@ -1,100 +1,100 @@
 export const characters = [
   {
     id: 1,
+    name: "Amy Wong",
     src: "http://i63.tinypic.com/rmpgms.jpg",
-    title: "Amy Wong",
     desc: "Character desc Here"
   },
   {
     id: 2,
+    name: "Bender B. Rodriguez",
     src: "http://i66.tinypic.com/2945bat.jpg",
-    title: "Bender B. Rodriguez",
     desc: "Character desc Here"
   },
   {
     id: 3,
+    name: "Phillip J. Fry",
     src: "http://i64.tinypic.com/5d194j.jpg",
-    title: "Phillip J. Fry",
     desc: "Character desc Here"
   },
   {
     id: 7,
+    name: "Turanga Leela",
     src: "http://i65.tinypic.com/kcxn9z.jpg",
-    title: "Turanga Leela",
     desc: "Character desc Here"
   },
   {
     id: 11,
+    name: "Professor Farmsworth",
     src: "http://i68.tinypic.com/1y4n5w.jpg",
-    title: "Professor Farmsworth",
     desc: "Character desc Here"
   },
   {
     id: 16,
+    name: "Zoidberg",
     src: "http://i64.tinypic.com/2vdp6v9.jpg",
-    title: "Zoidberg",
     desc: "Character desc Here"
   }
   //   {
   //     id: 4,
+  //     name: "Hermes Conrad",
   //     src: "./images/characters/HermesConrad.png",
-  //     title: "Hermes Conrad",
   //     desc: "Character desc Here"
   //   },
   //   {
   //     id: 5,
+  //     name: "Hypnotoad",
   //     src: "./images/characters/Hypnotoad.png",
-  //     title: "Hypnotoad",
   //     desc: "Character desc Here"
   //   },
   //   {
   //     id: 6,
+  //     name: "Kif Kroker",
   //     src: "./images/characters/KifKroker.png",
-  //     title: "Kif Kroker",
   //     desc: "Character desc Here"
   //   },
   //
   //   {
   //     id: 8,
+  //     name: "Mom",
   //     src: "./images/characters/Mom.png",
-  //     title: "Mom",
   //     desc: "Character desc Here"
   //   },
   //   {
   //     id: 9,
+  //     name: "Nibbler",
   //     src: "./images/characters/Nibbler.png",
-  //     title: "Nibbler",
   //     desc: "Character desc Here"
   //   },
   //   {
   //     id: 10,
+  //     name: "Nixon",
   //     src: "./images/characters/Nixon.png",
-  //     title: "Nixon",
   //     desc: "Character desc Here"
   //   },
   //
   //   {
   //     id: 12,
+  //     name: "Roberto",
   //     src: "./images/characters/Roberto.png",
-  //     title: "Roberto",
   //     desc: "Character desc Here"
   //   },
   //   {
   //     id: 13,
+  //     name: "Robot Devil",
   //     src: "./images/characters/RobotDevil.png",
-  //     title: "Robot Devil",
   //     desc: "Character desc Here"
   //   },
   //   {
   //     id: 14,
+  //     name: "Scruffy",
   //     src: "./images/characters/Scruffy.png",
-  //     title: "Scruffy",
   //     desc: "Character desc Here"
   //   },
   //   {
   //     id: 15,
+  //     name: "Zapp Braniggan",
   //     src: "./images/characters/ZappBraniggan.png",
-  //     title: "Zapp Braniggan",
   //     desc: "Character desc Here"
   //   },
 ];

@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import Body from "../common/body";
 import { getCharacters } from "../services/mockCharacterService";
 import * as characterQuote from "../services/characterQuotes";
-// import axios from "axios";s
+// import axios from "axios"
 
 class Characters extends Component {
   state = {
@@ -11,25 +11,38 @@ class Characters extends Component {
   };
 
   componentDidMount() {
+    // runs once sets the characters' id, name, desc, missing quote on CDM
     this.setState({ characters: getCharacters() });
-    // console.log(this.state.characters.name);
-    characterQuote.quote("bender");
-    // debugger;
-    //   axios
-    //     .get("http://futuramaapi.herokuapp.com/api/characters/amy")
-    //     .then(response => {
-    //       console.log(response);
-    //     })
-    //     .catch(error => {
-    //       console.log("something went wrong");
-    //     });
   }
 
+  getCharacterQuote(character) {
+    // need to read the quote based on the character which comes
+    // the characterQuote service
+    // needs to be called after CMD which adds the names to the object
+    // once that;s set need to read per name and
+    // add quote property to each character object
+
+    // characterQuote returns a promise
+    // need to resolve promise
+    // create new promise and resolve it into new variable
+
+    // let character = "bender";
+
+    let promise = characterQuote.quote(character);
+
+    debugger;
+    promise.then(response => {
+      console.log(response);
+      return response;
+    });
+  }
   render() {
     // let characters = this.state.characters.id;
 
     return (
       <Fragment>
+        {console.log(this.state.characters)}
+        {console.log(this.state.quotes)}
         <Body characters={this.state.characters} />
       </Fragment>
     );
