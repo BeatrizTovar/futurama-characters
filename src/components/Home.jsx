@@ -20,18 +20,22 @@ class Characters extends Component {
   getCharacterQuote() {
     let characters = this.state.characters;
     let randomQuote = characters.map(character => {
+      // ** revise characterService **
+      let promise = characterQuote.quote(character.name);
+      console.log(character.name);
+      // debugger;
       // needs to compare the response from the API to check that the names
       // are the same before extracting the random quote
-      // ** revise characterService **
 
-      let promise = characterQuote.quote(character.name);
-      // debugger;
       promise.then(response => {
-        console.log("res: ", response);
+        if (character.name.includes(response.character)) {
+          console.log("ASDFASDFSDf");
+        }
+        // console.log("res: ", response);
         return response;
       });
     });
-    console.log("characterQuote", randomQuote);
+    // console.log("characterQuote", randomQuote);
 
     // Option 1
     // need to read the quote based on the character which comes
