@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import Body from "../common/body";
 import { getCharacters } from "../services/mockCharacterService";
 import * as characterQuote from "../services/characterQuotes";
+import { get } from "https";
 // import axios from "axios"
 
 class Characters extends Component {
@@ -11,11 +12,24 @@ class Characters extends Component {
   };
 
   componentDidMount() {
+    console.log("CMD");
     // runs once sets the characters' id, name, desc, missing quote on CDM
     this.setState({ characters: getCharacters() });
   }
 
-  getCharacterQuote(character) {
+  getCharacterQuote() {
+    let characters = this.state.characters;
+    let randomQuote = characters.map(character => {
+      console.log(character.name.split(" "));
+      let promise = characterQuote.quote(character.name);
+      // debugger;
+      promise.then(response => {
+        console.log("res: ", response);
+        return response;
+      });
+    });
+    console.log("characterQuote", randomQuote);
+
     // Option 1
     // need to read the quote based on the character which comes
     // the characterQuote service
@@ -33,21 +47,21 @@ class Characters extends Component {
 
     // let character = "bender";
 
-    let promise = characterQuote.quote(character);
+    // let promise = characterQuote.quote(character);
 
-    debugger;
-    promise.then(response => {
-      console.log(response);
-      return response;
-    });
+    // promise.then(response => {
+    //   console.log("res: ", response);
+    //   return response;
+    // });
   }
   render() {
     // let characters = this.state.characters.id;
+    this.getCharacterQuote();
 
     return (
       <Fragment>
-        {console.log(this.state.characters)}
-        {console.log(this.state.quotes)}
+        {/* {console.log("chars: ", this.state.characters)} */}
+        {/* {console.log("quote: ", this.state.quotes)} */}
         <Body characters={this.state.characters} />
       </Fragment>
     );
