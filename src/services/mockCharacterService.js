@@ -1,7 +1,7 @@
 export const characters = [
   {
     id: 1,
-    name: "Amy Wong",
+    name: "Amy",
     src: "http://i63.tinypic.com/rmpgms.jpg",
     desc: "Character desc Here"
   },

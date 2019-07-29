@@ -20,7 +20,10 @@ class Characters extends Component {
   getCharacterQuote() {
     let characters = this.state.characters;
     let randomQuote = characters.map(character => {
-      console.log(character.name.split(" "));
+      // needs to compare the response from the API to check that the names
+      // are the same before extracting the random quote
+      // ** revise characterService **
+
       let promise = characterQuote.quote(character.name);
       // debugger;
       promise.then(response => {
