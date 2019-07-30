@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import Body from "../common/body";
 import { getCharacters } from "../services/mockCharacterService";
 import * as characterQuote from "../services/characterQuotes";
-import { get } from "https";
+// import { get } from "https";
 // import axios from "axios"
 
 class Characters extends Component {
@@ -28,9 +28,6 @@ class Characters extends Component {
       // are the same before extracting the random quote
 
       promise.then(response => {
-        if (character.name.includes(response.character)) {
-          console.log("ASDFASDFSDf");
-        }
         // console.log("res: ", response);
         return response;
       });
