@@ -21,7 +21,7 @@ class Characters extends Component {
     let characters = this.state.characters;
     let randomQuote = characters.map(character => {
       // ** revise characterService **
-      let promise = characterQuote.quote(character.name);
+      let promise = characterQuote.quote(character.firstName);
       console.log(character.name);
       // debugger;
       // needs to compare the response from the API to check that the names

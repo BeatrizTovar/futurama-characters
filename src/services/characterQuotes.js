@@ -16,7 +16,7 @@ const successResponse = response => {
   let length = data.length;
   let defaultMessage = "Ooops! There seems to be nothing here!";
 
-  data.map(name => console.log(name.character));
+  data.map(name => console.log(name.quote));
   // console.log(test);
 
   if (length < 1 || length === undefined) {
