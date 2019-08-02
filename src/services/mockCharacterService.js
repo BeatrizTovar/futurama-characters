@@ -1,3 +1,6 @@
+// No Longer in Use
+// Saved for Reference
+
 export const characters = [
   {
     id: 1,

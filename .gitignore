@@ -24,3 +24,6 @@ yarn-error.log*
 
 # images
 src/images
+
+#summay and notes
+versions.md 
