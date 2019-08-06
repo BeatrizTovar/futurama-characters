@@ -3,8 +3,8 @@ import axios from "axios";
 function quote(character) {
   const promise = axios
     .get(`http://futuramaapi.herokuapp.com/api/characters/${character}`)
-    .then(checkChar(character, successResponse))
-    // .then(successResponse)
+    .then(checkChar(character))
+    .then(successResponse)
     .catch(errorResponse);
 
   return promise;
@@ -21,7 +21,7 @@ const successResponse = response => {
   let length = data.length;
   let defaultMessage = "Ooops! There seems to be nothing here!";
 
-  data.map(name => console.log(name.quote));
+  // data.map(name => console.log(name.quote));
   // data.filter( if ())
   // console.log(test);
 

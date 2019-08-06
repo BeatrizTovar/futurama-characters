@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import Body from "../common/body";
-import { getCharacters } from "../services/mockCharacterService";
+import { getCharacters } from "../services/characters";
 import * as characterQuote from "../services/characterQuotes";
 // import { get } from "https";
 // import axios from "axios"
@@ -21,8 +21,8 @@ class Characters extends Component {
     let characters = this.state.characters;
     let randomQuote = characters.map(character => {
       // ** revise characterService **
-      let promise = characterQuote.quote(character.firstName);
-      console.log(character.name);
+      let promise = characterQuote.quote(character.id);
+      console.log(character.id);
       // debugger;
       // needs to compare the response from the API to check that the names
       // are the same before extracting the random quote
@@ -32,7 +32,7 @@ class Characters extends Component {
         return response;
       });
     });
-    // console.log("characterQuote", randomQuote);
+    // console.log(this.state.characters);
 
     // Option 1
     // need to read the quote based on the character which comes

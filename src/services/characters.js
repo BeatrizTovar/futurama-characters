@@ -1,4 +1,4 @@
-export const images = [
+export const characters = [
   { id: "Amy", src: "http://i63.tinypic.com/rmpgms.jpg" },
   { id: "Bender", src: "http://i66.tinypic.com/2945bat.jpg" },
   { id: "Leela", src: "http://i65.tinypic.com/kcxn9z.jpg" },
@@ -6,6 +6,6 @@ export const images = [
   { id: "Dr Zoidberg", src: "http://i64.tinypic.com/2vdp6v9.jpg" }
 ];
 
-export function getImages() {
-  return images.filter(g => g);
+export function getCharacters() {
+  return characters;
 }
