@@ -2,8 +2,6 @@ import React, { Component, Fragment } from "react";
 import Body from "../common/body";
 import { getCharacters } from "../services/characters";
 import * as characterQuote from "../services/characterQuotes";
-// import { get } from "https";
-// import axios from "axios"
 
 class Characters extends Component {
   state = {
@@ -13,7 +11,7 @@ class Characters extends Component {
 
   componentDidMount() {
     console.log("CMD");
-    // runs once sets the characters' id, name, desc, missing quote on CDM
+    // runs once sets the characters' id, and image
     this.setState({ characters: getCharacters() });
   }
 
@@ -33,21 +31,6 @@ class Characters extends Component {
       });
     });
     // console.log(this.state.characters);
-
-    // Option 1
-    // need to read the quote based on the character which comes
-    // the characterQuote service
-    // needs to be called after CMD which adds the names to the object
-    // once that;s set need to read per name and
-    // add quote property to each character object
-
-    // Option 2
-    // obtain quotes from second api and do the mapping and matching
-    // in the body just as the mapping of all characters
-
-    // characterQuote returns a promise
-    // need to resolve promise
-    // create new promise and resolve it into new variable
 
     // let character = "bender";
 

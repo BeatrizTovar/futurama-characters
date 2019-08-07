@@ -111,8 +111,7 @@ body {
   border-radius: 10px;
 }
 
-.card-content > img {
-  float: left;
+.card-image > img {
   border: #f6ee6cd1 solid 6px;
   border-radius: 5px;
 }
@@ -122,5 +121,5 @@ body {
 }
 
 .card-footer {
-  margin-top: 20%;
+  margin-top: 15%;
 }

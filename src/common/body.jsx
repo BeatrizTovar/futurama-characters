@@ -11,10 +11,12 @@ const Body = ({ characters }) => {
         <div className="hqBack">
           <section className="card">
             {characters.map(char => (
-              <div className="card-content" key={char._id}>
-                <Image src={char.src} />
-                <p>{`${char.id}`}</p>
+              <div className="card-content" key={char.id}>
+                <div className="card-image">
+                  <Image src={char.src} />
+                </div>
                 <div className="card-footer">
+                  <p>{`${char.id}`}</p>
                   {/* <p>Desc: {char.desc}</p> */}
                   <p>Quote: {"random Quote"}</p>
                 </div>

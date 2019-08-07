@@ -32,7 +32,7 @@ const successResponse = response => {
     //  data[i] where i is a random integer based on array length
     let randomIndex = data[Math.floor(Math.random() * length)];
     // console.log(randomIndex);
-    debugger;
+    // debugger;
     return randomIndex;
   }
 };
