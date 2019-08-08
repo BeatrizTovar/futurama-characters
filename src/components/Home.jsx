@@ -32,6 +32,13 @@ class Characters extends Component {
     });
     // console.log(this.state.characters);
 
+    //option 1 retrieve all quotes then match up to the cahrs
+
+    // or
+
+    // option to retrueve quotes by using the chars
+    //using ids of chars array
+
     // let character = "bender";
 
     // let promise = characterQuote.quote(character);
