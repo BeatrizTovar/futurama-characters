@@ -14,31 +14,30 @@ class Characters extends Component {
     console.log("CMD");
     // runs once sets the characters' id, and image
     this.setState({ characters: getCharacters() });
+    // let chars = getCharacters();
+    // console.log(chars);
+    this.getCharacterQuote();
   }
 
   getCharacterQuote() {
     let characters = this.state.characters;
 
-    let names = ["Amy", "Fry", "Leela"];
-
-    let randomQuote = names.map(character => {
-      // ** revise characterService **
+    let randomQuote = characters.map(character => {
       let promise = characterQuote.quote(character.id);
 
       promise.then(response => {
-        console.log("res: ", response);
-        return response.data;
+        console.log("res: ", response.character, response.quote);
+        return response;
       });
-
-      debugger;
 
       return promise;
     });
+
     console.log("rQ", randomQuote);
   }
+
   render() {
     // let characters = this.state.characters.id;
-    this.getCharacterQuote();
 
     return (
       <Fragment>
