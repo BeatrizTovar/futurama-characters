@@ -3,15 +3,10 @@ import axios from "axios";
 function quote(character) {
   const promise = axios
     .get(`http://futuramaapi.herokuapp.com/api/characters/${character}`)
-    .then(checkChar(character))
     .then(successResponse)
     .catch(errorResponse);
 
   return promise;
-}
-
-function checkChar(char) {
-  console.log(char);
 }
 
 const successResponse = response => {
@@ -31,7 +26,7 @@ const successResponse = response => {
   } else {
     //  data[i] where i is a random integer based on array length
     let randomIndex = data[Math.floor(Math.random() * length)];
-    // console.log(randomIndex);
+    // console.log(randomIndex.quote);
     // debugger;
     return randomIndex;
   }

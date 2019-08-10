@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import Body from "../common/body";
 import { getCharacters } from "../services/characters";
 import * as characterQuote from "../services/characterQuotes";
+import { resolve } from "q";
 
 class Characters extends Component {
   state = {
@@ -17,36 +18,23 @@ class Characters extends Component {
 
   getCharacterQuote() {
     let characters = this.state.characters;
-    let randomQuote = characters.map(character => {
+
+    let names = ["Amy", "Fry", "Leela"];
+
+    let randomQuote = names.map(character => {
       // ** revise characterService **
       let promise = characterQuote.quote(character.id);
-      console.log(character.id);
-      // debugger;
-      // needs to compare the response from the API to check that the names
-      // are the same before extracting the random quote
 
       promise.then(response => {
-        // console.log("res: ", response);
-        return response;
+        console.log("res: ", response);
+        return response.data;
       });
+
+      debugger;
+
+      return promise;
     });
-    // console.log(this.state.characters);
-
-    //option 1 retrieve all quotes then match up to the cahrs
-
-    // or
-
-    // option to retrueve quotes by using the chars
-    //using ids of chars array
-
-    // let character = "bender";
-
-    // let promise = characterQuote.quote(character);
-
-    // promise.then(response => {
-    //   console.log("res: ", response);
-    //   return response;
-    // });
+    console.log("rQ", randomQuote);
   }
   render() {
     // let characters = this.state.characters.id;
