@@ -15,18 +15,30 @@ class Characters extends Component {
     // runs once sets the characters' id, and image
     // this.setState({ characters: getCharacters() });
     let chars = getCharacters();
-    console.log("chars CMD", chars);
+    // console.log("chars CMD", chars);
     // this.getCharacterQuote(chars);
 
     this.getCharacterQuote(chars);
   }
 
   getCharacterQuote(array) {
+    this.setState({ characters: array });
     array.map(ch => {
       let quotes = characterQuote.quote(ch.id);
-      quotes.then(res => {
-        this.setState({ quotes: res.quote });
-      });
+      quotes
+        .then(
+          res => {
+            return res.quote;
+          }
+          // console.log(quote);
+          // this.setState({ quotes: res.quote });
+        )
+        .then(result => {
+          let chars = this.state.characters;
+          chars[ch.id].quote = result;
+          // this.setState({ characters: chars });
+          console.log(chars);
+        });
 
       // console.log(quotes);
     });
@@ -50,7 +62,8 @@ class Characters extends Component {
   // }
 
   render() {
-    // let characters = this.state.characters.id;
+    let characters = this.state.characters;
+    console.log("chars", characters);
     console.log("quotes", this.state.quotes);
 
     return (
