@@ -10,6 +10,7 @@ function quote(character) {
 }
 
 const successResponse = response => {
+  debugger;
   let data = response.data; // save each characters data in an array
   // array of objects each one containing a characters, quote, image,
   // character => id , quote => quote, image is not currently used

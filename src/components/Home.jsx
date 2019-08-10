@@ -13,31 +13,45 @@ class Characters extends Component {
   componentDidMount() {
     console.log("CMD");
     // runs once sets the characters' id, and image
-    this.setState({ characters: getCharacters() });
-    // let chars = getCharacters();
-    // console.log(chars);
-    this.getCharacterQuote();
+    // this.setState({ characters: getCharacters() });
+    let chars = getCharacters();
+    console.log("chars CMD", chars);
+    // this.getCharacterQuote(chars);
+
+    this.getCharacterQuote(chars);
   }
 
-  getCharacterQuote() {
-    let characters = this.state.characters;
-
-    let randomQuote = characters.map(character => {
-      let promise = characterQuote.quote(character.id);
-
-      promise.then(response => {
-        console.log("res: ", response.character, response.quote);
-        return response;
+  getCharacterQuote(array) {
+    array.map(ch => {
+      let quotes = characterQuote.quote(ch.id);
+      quotes.then(res => {
+        this.setState({ quotes: res.quote });
       });
 
-      return promise;
+      // console.log(quotes);
     });
-
-    console.log("rQ", randomQuote);
   }
+
+  // getCharacterQuote() {
+  //   let characters = this.state.characters;
+
+  //   let randomQuote = characters.map(character => {
+  //     let promise = characterQuote.quote(character.id);
+
+  //     promise.then(response => {
+  //       console.log("res: ", response.character, response.quote);
+  //       return response;
+  //     });
+
+  //     return promise;
+  //   });
+
+  //   console.log("rQ", randomQuote);
+  // }
 
   render() {
     // let characters = this.state.characters.id;
+    console.log("quotes", this.state.quotes);
 
     return (
       <Fragment>
