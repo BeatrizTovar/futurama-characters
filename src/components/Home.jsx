@@ -25,22 +25,26 @@ class Characters extends Component {
     this.setState({ characters: array });
     array.map(ch => {
       let quotes = characterQuote.quote(ch.id);
-      quotes
-        .then(
-          res => {
-            return res.quote;
-          }
-          // console.log(quote);
-          // this.setState({ quotes: res.quote });
-        )
-        .then(result => {
-          let chars = array;
+      quotes.then(
+        res => {
+          let characters = this.state.characters;
+          // console.log(res);
+          console.log("state: ", characters);
+        }
+        // console.log(quote);
+        // this.setState({ quotes: res.quote });
+      );
+      // .then(result => {
+      //   let characters = this.state.characters;
+      //   characters.forEach(quote => {
+      //     quote.randomQuote = result;
+      //   });
 
-          let test = result;
-          // chars[ch.id].quote = test;
-          // this.setState({ characters: chars });
-          console.log(chars);
-        });
+      //   let test = result;
+      //   // chars[ch.id].quote = test;
+      //   // this.setState({ characters: chars });
+      //   console.log(characters);
+      // });
 
       // console.log(quotes);
     });
@@ -49,7 +53,7 @@ class Characters extends Component {
   render() {
     let characters = this.state.characters;
     console.log("chars", characters);
-    console.log("quotes", this.state.quotes);
+    // console.log("quotes", this.state.quotes);
 
     return (
       <Fragment>
