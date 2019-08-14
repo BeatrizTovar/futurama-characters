@@ -25,15 +25,21 @@ class Characters extends Component {
     this.setState({ characters: array });
     array.map(ch => {
       let quotes = characterQuote.quote(ch.id);
-      quotes.then(
-        res => {
-          let characters = this.state.characters;
-          // console.log(res);
-          console.log("state: ", characters);
+      quotes.then(res => {
+        if (res.character === ch.id) {
+          console.log("resCh: ", res.character, "resQ: ", res.quote);
         }
-        // console.log(quote);
-        // this.setState({ quotes: res.quote });
-      );
+        // let characters = this.state.characters;
+        // console.log(res.character);
+        // console.log(ch.id);
+        // let quotes = characters.filter(name => {
+        //   if (name.id === res.character) {
+        //   }
+        // });
+        // console.log("quotes:", quotes);
+        // console.log(res);
+        // console.log("state: ", characters);
+      });
       // .then(result => {
       //   let characters = this.state.characters;
       //   characters.forEach(quote => {
