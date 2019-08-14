@@ -27,7 +27,14 @@ class Characters extends Component {
       let quotes = characterQuote.quote(ch.id);
       quotes.then(res => {
         if (res.character === ch.id) {
+          let newObj = { randomQuote: res.quote };
+          console.log(newObj);
           console.log("resCh: ", res.character, "resQ: ", res.quote);
+          // let q = res.quote;
+          // let obj = JSON.parse(JSON.stringify(array));
+          // obj[ch.id].randomQuote = q;
+          // console.log(obj);
+          // array[`${ch.id}`].randomQuote = {res.quote};
         }
         // let characters = this.state.characters;
         // console.log(res.character);
