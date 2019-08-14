@@ -28,8 +28,10 @@ class Characters extends Component {
       quotes.then(res => {
         if (res.character === ch.id) {
           let newObj = { randomQuote: res.quote };
-          console.log(newObj);
-          console.log("resCh: ", res.character, "resQ: ", res.quote);
+          ch.randomQuote = res.quote;
+          console.log(ch);
+          // console.log(newObj);
+          // console.log("resCh: ", res.character, "resQ: ", res.quote);
           // let q = res.quote;
           // let obj = JSON.parse(JSON.stringify(array));
           // obj[ch.id].randomQuote = q;
