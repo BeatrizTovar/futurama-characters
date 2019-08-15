@@ -29,9 +29,8 @@ class Characters extends Component {
           // let newObj = { randomQuote: res.quote };
           ch.randomQuote = res.quote;
           // console.log(ch);
+          return ch;
         }
-        return ch;
-        console.log(ch);
         console.log("quotes:", quotes);
         // console.log(res);
         // console.log("state: ", characters);
@@ -54,7 +53,7 @@ class Characters extends Component {
 
   render() {
     let characters = this.state.characters;
-    console.log("chars", characters);
+    // console.log("chars", characters);
     // console.log("quotes", this.state.quotes);
 
     return (

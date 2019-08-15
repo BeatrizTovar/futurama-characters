@@ -4,6 +4,7 @@ import { Image, Stack } from "grommet";
 // import StarBackground from "../images/misc/StarBackground.png";
 
 const Body = ({ characters }) => {
+  console.log(characters);
   // debugger;
   return (
     <Fragment>
