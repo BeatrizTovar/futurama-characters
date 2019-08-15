@@ -2,7 +2,6 @@ import React, { Component, Fragment } from "react";
 import Body from "../common/body";
 import { getCharacters } from "../services/characters";
 import * as characterQuote from "../services/characterQuotes";
-import { resolve } from "q";
 
 class Characters extends Component {
   state = {
@@ -27,25 +26,13 @@ class Characters extends Component {
       let quotes = characterQuote.quote(ch.id);
       quotes.then(res => {
         if (res.character === ch.id) {
-          let newObj = { randomQuote: res.quote };
+          // let newObj = { randomQuote: res.quote };
           ch.randomQuote = res.quote;
-          console.log(ch);
-          // console.log(newObj);
-          // console.log("resCh: ", res.character, "resQ: ", res.quote);
-          // let q = res.quote;
-          // let obj = JSON.parse(JSON.stringify(array));
-          // obj[ch.id].randomQuote = q;
-          // console.log(obj);
-          // array[`${ch.id}`].randomQuote = {res.quote};
+          // console.log(ch);
         }
-        // let characters = this.state.characters;
-        // console.log(res.character);
-        // console.log(ch.id);
-        // let quotes = characters.filter(name => {
-        //   if (name.id === res.character) {
-        //   }
-        // });
-        // console.log("quotes:", quotes);
+        return ch;
+        console.log(ch);
+        console.log("quotes:", quotes);
         // console.log(res);
         // console.log("state: ", characters);
       });
