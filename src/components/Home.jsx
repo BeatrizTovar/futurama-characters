@@ -26,28 +26,13 @@ class Characters extends Component {
       let quotes = characterQuote.quote(ch.id);
       quotes.then(res => {
         if (res.character === ch.id) {
-          // let newObj = { randomQuote: res.quote };
           ch.randomQuote = res.quote;
           // console.log(ch);
           return ch;
         }
-        console.log("quotes:", quotes);
+        // console.log("quotes:", quotes);
         // console.log(res);
-        // console.log("state: ", characters);
       });
-      // .then(result => {
-      //   let characters = this.state.characters;
-      //   characters.forEach(quote => {
-      //     quote.randomQuote = result;
-      //   });
-
-      //   let test = result;
-      //   // chars[ch.id].quote = test;
-      //   // this.setState({ characters: chars });
-      //   console.log(characters);
-      // });
-
-      // console.log(quotes);
     });
   }
 
@@ -58,7 +43,7 @@ class Characters extends Component {
 
     return (
       <Fragment>
-        {/* {console.log("chars: ", this.state.characters)} */}
+        {console.log("chars: ", this.state.characters)}
         {/* {console.log("quote: ", this.state.quotes)} */}
         <Body characters={characters} />
       </Fragment>

@@ -4,7 +4,8 @@ import { Image, Stack } from "grommet";
 // import StarBackground from "../images/misc/StarBackground.png";
 
 const Body = ({ characters }) => {
-  console.log(characters);
+  // console.log("chars", characters);
+  // console.log(characters.randomQuote);
   // debugger;
   return (
     <Fragment>
@@ -18,8 +19,7 @@ const Body = ({ characters }) => {
                 </div>
                 <div className="card-footer">
                   <p>{`${char.id}`}</p>
-                  {/* <p>Desc: {char.desc}</p> */}
-                  <p>Quote: {"random Quote"}</p>
+                  <p>Quote: {char.randomQuote}</p>
                 </div>
               </div>
             ))}
